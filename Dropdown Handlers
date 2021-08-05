@@ -1,0 +1,32 @@
+
+
+from selenium.webdriver.support.ui import Select
+
+  dropdown = Select(driver.find_element_by_id('lang2'))
+        dropdown.select_by_index(3)
+        dropdown.select_by_value('php')
+        dropdown.select_by_visible_text('Python')
+        
+  dropdown1 = Select(driver.find_element_by_id('lang1'))
+  dropdown1.select_by_visible_text('Java')
+
+  myOption = driver.find_element_by_xpath("//select[@multiple]/option[contains(text(), 'C#')]")
+  myOption1 = driver.find_element_by_xpath("//select[@multiple]/option[contains(text(), 'PHP')]")
+  
+     #Declare Dropdown Element 
+    dropdownOfThree = Select(browser.find_element_by_id('sel1'))
+    selectBears = dropdownOfThree.select_by_visible_text('Bears')
+    selectBeets = dropdownOfThree.select_by_visible_text('Beets')
+    selectBattlestarGalactica = dropdownOfThree.select_by_visible_text('Battlestar Galactica')
+
+    def getElementDropdown(self):
+        return self.dropdownOfThree
+
+    def getDropdownBears(self):
+        return self.selectBears
+
+    def getDropdownBeets(self):
+        return self.selectBeets
+    
+    def getDropdownBG(self):
+        return self.selectBattlestarGalactica
